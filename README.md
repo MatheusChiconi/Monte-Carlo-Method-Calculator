@@ -18,7 +18,9 @@ monte-carlo-simulation/
 ├── visualizations/
 │   ├── Exp_Estimation.png         # Graph showing exponential area estimation results
 │   └── Pi_Estimation.png          # Graph showing Pi estimation results
-└── README.md                      # Project documentation
+├── README.md                      # Project documentation
+│
+└── requirements.txt               # Use to install the requirements
 ```
 
 
