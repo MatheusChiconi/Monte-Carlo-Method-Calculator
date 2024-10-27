@@ -15,7 +15,7 @@ class Circle:
         return (point_x - center_x) ** 2 + (point_y - center_y) ** 2 <= self.radius**2
 
 class Square:
-    def __init__(self,length,position=(0, 0),function_mode=False,):  
+    def __init__(self, length, position=(0, 0), function_mode=False,):  
     # if function_mode is True, the left down corner is in the origin the center of the square is the position
         self.length = length
         self.position = position
@@ -39,15 +39,18 @@ class Square:
         return (x_rand, y_rand)
 
 class exponential_function:  # a * exp(b * x)
-    def __init__(self, a, b):
+    def __init__(self, a, b=-1): # b must to be negative
         self.a = a
         self.b = b
+        if b > 0:
+            raise ValueError("The exponential function must be decreasing")
 
     def value(self, x):
         return self.a * m.exp(self.b * x)
 
     def real_area(self, x0, x1):  # integral from x0 to x1 of a * exp(b * x) dx
-        return (self.a / self.b) * (m.exp(self.b * x1) - m.exp(self.b * x0))
+        real_area = (self.a / self.b) * (m.exp(self.b * x1) - m.exp(self.b * x0))
+        return real_area
 
     def is_inside(self, point):
         x, y = point

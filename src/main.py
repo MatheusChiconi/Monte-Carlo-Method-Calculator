@@ -22,7 +22,7 @@ def pi_monte_carlo(circle, square, number_points):
     return pi_calculated, m.pi, pi_values
 
 # Plot function
-def plot_points_pi(values_points, expeted_result):
+def plot_points(values_points, expeted_result):
     x = [p[0] for p in values_points]
     y = [p[1] for p in values_points]
 
@@ -41,7 +41,6 @@ def estimate_exponential_area(exp_function, square, number_points):
     if not square.function_mode:
         print("The square must be in function mode")
         return None
-    
     area_values = []
     count_points_in_area = 0
     x0, x1 = 0, square.length
@@ -60,14 +59,12 @@ def estimate_exponential_area(exp_function, square, number_points):
     
     return area_calculated, exp_function.real_area(x0, x1), area_values
 
-# Example usage
-circle = Circle(radius=1)
-square = Square(length=2)
+square = Square(2, function_mode=True)
+exp_function = exponential_function(a=1, b=1)
 
-# Run the Monte Carlo simulation to estimate Pi
-pi_calculated, pi_real, pi_values = pi_monte_carlo(circle, square, 1000000)
-print(f"Estimated Pi Value: {pi_calculated}")
-print(f"Actual Pi Value: {pi_real}")
+points = 1
+area_calculated, exp_function_real_area, area_values = estimate_exponential_area(exp_function, square, points)
+print(f"Estimated area calculated: {area_calculated}")
+print(f"Real area calculated: {exp_function_real_area}")
 
-# Plot the results
-plot_points_pi(pi_values, pi_real)
+plot_points(area_values,exp_function_real_area)
