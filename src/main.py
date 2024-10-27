@@ -58,13 +58,3 @@ def estimate_exponential_area(exp_function, square, number_points):
         area_values.append((i, area_calculated))
     
     return area_calculated, exp_function.real_area(x0, x1), area_values
-
-square = Square(2, function_mode=True)
-exp_function = exponential_function(a=1, b=1)
-
-points = 1
-area_calculated, exp_function_real_area, area_values = estimate_exponential_area(exp_function, square, points)
-print(f"Estimated area calculated: {area_calculated}")
-print(f"Real area calculated: {exp_function_real_area}")
-
-plot_points(area_values,exp_function_real_area)
