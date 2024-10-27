@@ -20,7 +20,6 @@ monte-carlo-simulation/
 │   └── Pi_Estimation.png          # Graph showing Pi estimation results
 └── README.md                      # Project documentation
 ```
-```
 
 
 ## ❕ Description ❕
