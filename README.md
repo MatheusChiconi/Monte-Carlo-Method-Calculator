@@ -4,19 +4,23 @@ This project uses the Monte Carlo method to estimate areas, such as the value of
 
 The code was developed in Python.
 
+
 ## Project Structure
 
+```
 monte-carlo-simulation/
 ├── demos/
-│   └── calculating_pi.ipynb     # Demonstrative notebook for calculating Pi
-│   └── area_exponential.ipynb
+│   ├── calculating_pi.ipynb       # Demonstrative notebook for calculating Pi
+│   └── area_exponential.ipynb     # Demonstrative notebook for exponential area estimation
 ├── src/
-│   ├── main.py                  # Main functions for the simulation
-│   └── utils.py                 # Auxiliary classes for geometric shapes
+│   ├── main.py                    # Main functions for the simulation
+│   └── utils.py                   # Auxiliary classes for geometric shapes
 ├── visualizations/
-│   ├── Exp_Estimation.png       # Graph showing results
-│   └── Pi_Estimation.png
-└── README.md                    # Documentação do projeto
+│   ├── Exp_Estimation.png         # Graph showing exponential area estimation results
+│   └── Pi_Estimation.png          # Graph showing Pi estimation results
+└── README.md                      # Project documentation
+```
+```
 
 
 ## ❕ Description ❕
